@@ -37,7 +37,7 @@ export default class CollapsibleList extends Component {
 
   setMinHeight = (event) => {
     const { height: minHeight } = event.nativeEvent.layout;
-    const { visibleItemPartShown } = this.props;
+    const { visibleItemPartShown = 1 } = this.props;
     this.setState({ minHeight }, () => {
       this.setState({ initialized: true, currentHeight: minHeight * visibleItemPartShown });
     });
@@ -45,7 +45,7 @@ export default class CollapsibleList extends Component {
 
   toggle = () => {
     const { minHeight, collapsed } = this.state;
-    const { onToggle, animationConfig, visibleItemPartShown } = this.props;
+    const { onToggle, animationConfig, visibleItemPartShown = 1 } = this.props;
     let nextHeight;
 
     if (collapsed) {

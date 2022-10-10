@@ -9,7 +9,7 @@ declare module "react-native-collapsible-list" {
     /** The possition of the button. Default value is `bottom` */
     buttonPosition?: 'top' | 'bottom';
     numberOfVisibleItems?: number;
-    visibleItemPartShown?: 1;
+    visibleItemPartShown?: number;
     onToggle?: (collapsed: boolean) => void;
     wrapperStyle?: ReactNative.ViewStyle;
   }
